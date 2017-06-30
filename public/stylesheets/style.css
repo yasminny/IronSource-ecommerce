@@ -1,0 +1,182 @@
+main, header, footer, figcaption, section, div, ul, li, h1, h2, h3, p, a {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  list-style: none;
+}
+
+html,
+body {
+  font: 100% 'Source Sans Pro', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  height: 85%;
+  margin: 0;
+  padding-top: 60px;
+}
+
+header {
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+ul {
+  padding-top: 10px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+li {
+  cursor: pointer;
+  background-color: lavender;
+  margin: 20px 0;
+}
+
+form {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-top: 3%;
+  padding-left: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+
+label {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+input {
+  border: none;
+  box-shadow: 0 11px 20px 0 rgba(138, 216, 219, 1);
+  width: 60%;
+  margin-left: 15px;
+}
+
+button {
+  margin: 0 auto;
+  border: none;
+  background-color: white;
+  box-shadow: 0 6px 14px 0 rgba(142, 229, 142, 1);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8ee58e;
+}
+
+.home-middle {
+  position: relative;
+  width: 55vw;
+  height: 110vw;
+  display: flex;
+  min-width: 350px;
+  max-height: 420px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  background-image: url("../images/student_lady_nerd-512.png");
+  width: 20vw;
+  min-width: 170px;
+  height: 20vw;
+  min-height: 170px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-bcg {
+  background: radial-gradient(ellipse at center, #8ad8db 0%, #ffffff 65%, #ffffff 100%);
+  width: 40vw;
+  min-width: 350px;
+  min-height: 350px;
+  height: 40vw;
+  position: fixed;
+  z-index: -110;
+}
+
+.hover-button-text {
+  position: absolute;
+  z-index: 40;
+  color: black;
+  top: 79%;
+}
+
+.image:hover + .image-bcg {
+  background: radial-gradient(ellipse at center, #8ee58e 0%, #ffffff 65%, #ffffff 100%);
+}
+
+.image:hover .hover-button-text, .hover-button-text:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.main-header-links {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  max-width: 212px;
+}
+
+.home-bottom {
+  width: 100%;
+  max-width: 575px;
+}
+
+.info {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#submit-image {
+  background-image: url("../images/student_lady_nerd_laptop-256.png");
+}

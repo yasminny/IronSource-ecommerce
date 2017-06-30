@@ -1,0 +1,45 @@
+{
+  "name": "IronSource-ecommerce",
+  "version": "0.0.0",
+  "description": "a demo ecommerce store for IronSource",
+  "homepage": "https://github.com/thoughtram/es6-6to5-browserify-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thoughtram/es6-6to5-browserify-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thoughtram/es6-6to5-browserify-boilerplate/issues"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "level": "^1.7.0",
+    "level-sublevel": "^6.6.1",
+    "morgan": "~1.8.1",
+    "nodemailer": "^4.0.1",
+    "normalize.css": "^7.0.0",
+    "serve-favicon": "~2.4.2",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "babelify": "~5.0.3",
+    "browser-sync": "^1.7.1",
+    "browserify": "^6.3.3",
+    "gulp": "~3.8.10",
+    "gulp-rename": "^1.2.0",
+    "lodash": "^2.4.1",
+    "rimraf": "~2.2.8",
+    "watchify": "^2.1.1",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "author": "Christoph Burgdorf <christoph@thoughtram.io>",
+  "license": "MIT"
+}

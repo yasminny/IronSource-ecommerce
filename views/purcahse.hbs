@@ -1,0 +1,62 @@
+<h1>Please provide your details</h1>
+<form action="/submit" method="get">
+  <label for="firstName">
+    First name:
+    <input type="text" id="firstName" name="firstName" placeholder="ex. John" required>
+  </label>
+  <label for="lastName">
+    Last name:
+    <input type="text" id="lastName" name="lastName" placeholder="ex. Smith" required>
+  </label>
+  <label for="email">
+    E-mail:
+    <input type="email" id="email" name="email" placeholder="ex. JSmith@gmail.com" required>
+  </label>
+  <label for="location">
+    City / Country:
+    <input type="text" id="location" name="location" required>
+  </label>
+  <button type="submit">Hire Yasmin Now</button>
+</form>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBn-LhgjMLDgfUUL9YWjvNeY12ojBbHkM&libraries=places"></script>
+<script>
+  const input = document.getElementById('location');
+  const autocomplete = new google.maps.places.Autocomplete(input, {types: ['(regions)']});
+  google.maps.event.addListener(autocomplete, 'place_changed', function () {
+    let place = autocomplete.getPlace();
+  });
+  const form = document.querySelector('form');
+  form.addEventListener('submit', xhrAddToData);
+  const firstNameInput = document.getElementById('firstName');
+  const lastNameInput = document.getElementById('lastName');
+  const emailInput = document.getElementById('email');
+  const locationInput = document.getElementById('location');
+
+  function xhrAddToData(e) {
+    e.preventDefault();
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', `/xhrAddToData`);
+
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    xhr.addEventListener('error', () => {
+      alert('problem!');
+    });
+
+    xhr.addEventListener('load', () => {
+      window.location.href = '/submit';
+    });
+
+    const submittedData = {
+      firstName: firstNameInput.value,
+      lastName: lastNameInput.value,
+      email: emailInput.value,
+      location: locationInput.value
+    };
+    xhr.send(JSON.stringify(submittedData));
+
+    return false;
+  }
+</script>

@@ -1,0 +1,17 @@
+<h1>Back Office Data</h1>
+<p>List of submitted requests:</p>
+<p>(Click a submit card for a pop up info)</p>
+<ul>
+  {{{ list }}}
+</ul>
+<script>
+  const ulElem = document.querySelector('ul');
+  ulElem.addEventListener('click', showDetails);
+
+  function showDetails(e) {
+    const target = e.target;
+    if (target.classList.contains('order')) {
+      alert(target.innerHTML.toString().split('<br>').join(', '));
+    }
+  }
+</script>
