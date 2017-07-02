@@ -21,7 +21,7 @@ function clearDb() {
       console.log(keyArray);
     })
     .on('end', function () {
-      keyArray.forEach((key) => {
+      keyArray.forEach(function(key) {
         db.del(key, function (err) {
         });
       });
@@ -39,7 +39,7 @@ router.get('/getData', function (req, res, next) {
     })
     .on('end', function () {
       let template = '';
-      baseData.forEach((obj) => {
+      baseData.forEach(function(obj) {
         return template += `<li class="order">First name: ${obj.firstName}<br/>Last name: ${obj.lastName}<br/>Email: ${obj.email}<br/>Location: ${obj.location}</li>`;
       });
       res.render('getData', {list: template});
@@ -62,7 +62,7 @@ router.get('/submit', function (req, res, next) {
 
 
 /* inputs data into leveldb and send email*/
-router.post('/xhrAddToData', (req, res) => {
+router.post('/xhrAddToData', function(req, res) {
   let newSubmit = req.body;
 
   let mailOptionsOk = {

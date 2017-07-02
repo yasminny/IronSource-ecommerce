@@ -142,6 +142,8 @@ button:hover {
   height: 40vw;
   position: fixed;
   z-index: -110;
+  top: 15%;
+  left: 30%;
 }
 
 .hover-button-text {
@@ -149,6 +151,11 @@ button:hover {
   z-index: 40;
   color: black;
   top: 79%;
+  left: 32%;
+}
+
+.submit-thanks {
+  left: 39%;
 }
 
 .image:hover + .image-bcg {

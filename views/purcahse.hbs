@@ -18,8 +18,7 @@
   </label>
   <button type="submit">Hire Yasmin Now</button>
 </form>
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBn-LhgjMLDgfUUL9YWjvNeY12ojBbHkM&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBn-LhgjMLDgfUUL9YWjvNeY12ojBbHkM&libraries=places"></script>
 <script>
   const input = document.getElementById('location');
   const autocomplete = new google.maps.places.Autocomplete(input, {types: ['(regions)']});
@@ -37,15 +36,16 @@
     e.preventDefault();
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', `/xhrAddToData`);
+    xhr.open('POST', '/xhrAddToData');
 
     xhr.setRequestHeader('Content-Type', 'application/json');
 
-    xhr.addEventListener('error', () => {
-      alert('problem!');
+
+    xhr.addEventListener('error', function() {
+      return alert('problem!');
     });
 
-    xhr.addEventListener('load', () => {
+    xhr.addEventListener('load', function() {
       window.location.href = '/submit';
     });
 
